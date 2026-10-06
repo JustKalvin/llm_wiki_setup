@@ -3,13 +3,13 @@ name: llm-wiki-search
 description: >
   Search the personal LLM wiki (second brain) at {your_llm_wiki_path}
   to answer a question. Use ONLY when the user explicitly asks to check the
-  wiki / second brain first — "search the wiki", "wiki: X", "dari wiki",
-  "cek wiki soal X", "what does my wiki say about X", "apa yang kita tahu
-  soal X", "X vs Y dari wiki". If the wiki lacks the answer or its sources
-  are insufficient, browse the web instead, then offer to file the result
-  back with llm-wiki-add. Do NOT trigger for saving content, for ordinary
-  questions the user never linked to the wiki, for coding tasks, or for
-  files being actively worked on.
+  wiki / second brain first — "search the wiki", "wiki: X", "from the wiki",
+  "check the wiki for X", "what does my wiki say about X", "what do we know
+  about X", "X vs Y from the wiki". If the wiki lacks the answer or its
+  sources are insufficient, browse the web instead, then offer to file the
+  result back with llm-wiki-add. Do NOT trigger for saving content, for
+  ordinary questions the user never linked to the wiki, for coding tasks,
+  or for files being actively worked on.
 ---
 
 # llm-wiki-search

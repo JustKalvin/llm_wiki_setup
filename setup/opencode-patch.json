@@ -1,4 +1,7 @@
 {
+  "instructions": [
+    "{your_home}/.config/opencode/instructions/nudge-web-first.md"
+  ],
   "permission": {
     "edit": {
       "~/llm_wiki": "allow",

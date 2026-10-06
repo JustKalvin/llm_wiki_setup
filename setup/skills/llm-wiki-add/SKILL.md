@@ -3,13 +3,13 @@ name: llm-wiki-add
 description: >
   Save important content into the personal LLM wiki (second brain) at
   {your_llm_wiki_path}. Use ONLY when the user explicitly asks to
-  save, add, or record something — "add this to wiki", "simpan ke wiki",
-  "catat ini", "ingest this", "remember this", "masukkan ke wiki" — whether
+  save, add, or record something — "add this to wiki", "save to the wiki",
+  "note this down", "ingest this", "remember this", "keep this" — whether
   the content is an article, URL, pasted text, a file, book/chapter, or the
   important points of the current conversation. Distill only what matters;
   never dump a whole chat. A bare URL or pasted file with no save instruction
   is NOT a trigger. Do NOT trigger on ordinary chat, code files being worked
-  on, or when the user says "don't save" / "jangan simpan".
+  on, or when the user says "don't save".
 ---
 
 # llm-wiki-add
@@ -57,8 +57,7 @@ AGENTS.md.
 
 ## Rules
 
-- Never save when the user said "don't save" / "jangan simpan" — that
-  overrides everything.
+- Never save when the user said "don't save" — that overrides everything.
 - If the session cwd is a different folder, still operate on the wiki by its
   absolute path above. Global config allows edits there; if a write is
   denied, report the permission error instead of writing elsewhere.
