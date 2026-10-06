@@ -1,7 +1,7 @@
 ---
 name: llm-wiki-search
 description: >
-  Search the personal LLM wiki (second brain) at C:\Users\<your-name>\llm_wiki
+  Search the personal LLM wiki (second brain) at {your_llm_wiki_path}
   to answer a question. Use ONLY when the user explicitly asks to check the
   wiki / second brain first — "search the wiki", "wiki: X", "dari wiki",
   "cek wiki soal X", "what does my wiki say about X", "apa yang kita tahu
@@ -14,12 +14,12 @@ description: >
 
 # llm-wiki-search
 
-Wiki root (hardcoded): `C:\Users\<your-name>\llm_wiki`
+Wiki root (hardcoded): `{your_llm_wiki_path}`
 
 ## First step, every time
 
-Read `C:\Users\<your-name>\llm_wiki\AGENTS.md` (the schema) and
-`C:\Users\<your-name>\llm_wiki\index.md` (the catalog). Follow the **query**
+Read `{your_llm_wiki_path}\AGENTS.md` (the schema) and
+`{your_llm_wiki_path}\index.md` (the catalog). Follow the **query**
 workflow in AGENTS.md.
 
 ## Workflow

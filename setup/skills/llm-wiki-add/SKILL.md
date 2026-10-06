@@ -2,7 +2,7 @@
 name: llm-wiki-add
 description: >
   Save important content into the personal LLM wiki (second brain) at
-  C:\Users\<your-name>\llm_wiki. Use ONLY when the user explicitly asks to
+  {your_llm_wiki_path}. Use ONLY when the user explicitly asks to
   save, add, or record something — "add this to wiki", "simpan ke wiki",
   "catat ini", "ingest this", "remember this", "masukkan ke wiki" — whether
   the content is an article, URL, pasted text, a file, book/chapter, or the
@@ -14,12 +14,12 @@ description: >
 
 # llm-wiki-add
 
-Wiki root (hardcoded): `C:\Users\<your-name>\llm_wiki`
+Wiki root (hardcoded): `{your_llm_wiki_path}`
 
 ## First step, every time
 
-Read `C:\Users\<your-name>\llm_wiki\AGENTS.md` (the schema) and
-`C:\Users\<your-name>\llm_wiki\index.md`. Follow the **ingest** workflow in
+Read `{your_llm_wiki_path}\AGENTS.md` (the schema) and
+`{your_llm_wiki_path}\index.md`. Follow the **ingest** workflow in
 AGENTS.md.
 
 ## Workflow

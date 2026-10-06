@@ -3,18 +3,14 @@
     "edit": {
       "~/llm_wiki": "allow",
       "~/llm_wiki/*": "allow",
-      "C:/Users/<your-name>/llm_wiki": "allow",
-      "C:/Users/<your-name>/llm_wiki/*": "allow",
-      "C:\\Users\\<your-name>\\llm_wiki": "allow",
-      "C:\\Users\\<your-name>\\llm_wiki\\*": "allow"
+      "{your_llm_wiki_path}": "allow",
+      "{your_llm_wiki_path}/*": "allow"
     },
     "external_directory": {
       "~/llm_wiki": "allow",
       "~/llm_wiki/*": "allow",
-      "C:/Users/<your-name>/llm_wiki": "allow",
-      "C:/Users/<your-name>/llm_wiki/*": "allow",
-      "C:\\Users\\<your-name>\\llm_wiki": "allow",
-      "C:\\Users\\<your-name>\\llm_wiki\\*": "allow"
+      "{your_llm_wiki_path}": "allow",
+      "{your_llm_wiki_path}/*": "allow"
     }
   }
 }

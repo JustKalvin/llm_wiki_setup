@@ -1,6 +1,6 @@
 Apply this gist: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-Wiki folder: C:\Users\kalvi\llm_wiki
+Wiki folder: {your_llm_wiki_path}        <-- change this line only
 
 This wiki folder contains a `setup\` folder with:
 
@@ -10,27 +10,37 @@ This wiki folder contains a `setup\` folder with:
 
 Do exactly this:
 
-1. WIKI_PATH = the "Wiki folder" path above. Wherever the placeholder
-   `C:\Users\kalvi\llm_wiki` appears (any slash direction), replace it with
-   WIKI_PATH's user part as a real absolute path.
+1. WIKI_PATH = the "Wiki folder" path above (the full absolute path to the
+   wiki, e.g. C:\Users\budi\llm_wiki).
 
-2. Copy, do not paraphrase — the files must stay byte-identical apart from
+2. Wherever the placeholder `{your_llm_wiki_path}` appears in the files
+   below, replace it with WIKI_PATH. Keep the backslash style you find:
+   a pattern like `{your_llm_wiki_path}\AGENTS.md` becomes
+   `WIKI_PATH\AGENTS.md` (e.g. `C:\Users\budi\llm_wiki\AGENTS.md`).
+
+3. Copy, do not paraphrase — the files must stay byte-identical apart from
    the placeholder replacement:
    - setup\skills\llm-wiki-search -> ~/.config/opencode/skills/llm-wiki-search
    - setup\skills\llm-wiki-add -> ~/.config/opencode/skills/llm-wiki-add
 
-3. Merge setup\opencode-patch.json into ~/.config/opencode/opencode.json
+4. Merge setup\opencode-patch.json into ~/.config/opencode/opencode.json
    (or .jsonc, whichever exists — prefer .jsonc if both exist):
    - deep-merge its `permission` block into the existing one, no duplicates
+   - the `~/llm_wiki` patterns are correct as-is (no replacement needed) as
+     long as the wiki lives at ~\llm_wiki; if WIKI_PATH is somewhere else,
+     remove those two `~/llm_wiki` entries instead of replacing them
+   - in merged JSON, `{your_llm_wiki_path}` becomes WIKI_PATH, and inside
+     JSON strings every backslash is doubled (C:\Users\budi\llm_wiki is
+     written C:\\Users\\budi\\llm_wiki)
    - preserve every other existing field, keep `$schema`
    - if the file is missing, create it with `$schema` plus the patch
    - never overwrite or remove anything the user already had
 
-4. Do NOT add anything to the `instructions` array. The wiki must stay
+5. Do NOT add anything to the `instructions` array. The wiki must stay
    passive: it is used only when the user invokes the two skills. Ordinary
    sessions must not change behavior.
 
-5. If WIKI_PATH is missing AGENTS.md, index.md, log.md, raw\, or wiki\,
+6. If WIKI_PATH is missing AGENTS.md, index.md, log.md, raw\, or wiki\,
    build that scaffold from the gist (ingest/query/lint workflows in
    AGENTS.md). If everything already exists, leave it untouched.
 
